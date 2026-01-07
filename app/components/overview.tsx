@@ -79,7 +79,7 @@ const Overview = () => {
   
   // Calculate dynamic highlights
   const accuracyDiff = (deit.finalMetrics.testAccuracy - resnet18.finalMetrics.testAccuracy).toFixed(1);
-  const paramRatio = (resnet18.finalMetrics.parameters.replace('M', '') / deit.finalMetrics.parameters.replace('M', '')).toFixed(1);
+  const paramRatio = (parseFloat(resnet18.finalMetrics.parameters.replace('M', '')) / parseFloat(deit.finalMetrics.parameters.replace('M', ''))).toFixed(1);
   const trainingSpeedPercent = ((1 - (parseFloat(resnet18.finalMetrics.trainingTime) / parseFloat(deit.finalMetrics.trainingTime))) * 100).toFixed(0);
 
   return (
