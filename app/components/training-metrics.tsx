@@ -103,7 +103,7 @@ const TrainingMetrics = () => {
                             <li>Slower training: <strong>~23 minutes</strong> (similar to ResNet)</li>
                             <li>Validation loss already very low (~0.13) from epoch 1</li>
                             <li><strong>Final validation accuracy: 94.92%</strong> (same as CNN!)</li>
-                            <li><strong>Why similar accuracy?</strong> CIFAR-10 is simple with only 10 classes. Both architectures easily saturate on this dataset despite using different approaches (CNN's spatial inductive bias vs ViT's global attention).</li>
+                            <li><strong>Why similar accuracy?</strong> {"CIFAR-10 is simple with only 10 classes. Both architectures easily saturate on this dataset despite using different approaches (CNN's spatial inductive bias vs ViT's global attention)."}</li>
                           </>
                         ) : (
                           <>
@@ -112,7 +112,7 @@ const TrainingMetrics = () => {
                             <li>Training time: <strong>~17.5 minutes</strong> (same as ResNet)</li>
                             <li>Validation loss decreases from ~2.60 to ~0.52</li>
                             <li><strong>Final validation accuracy: 85.25%</strong></li>
-                            <li><strong>Why better accuracy?</strong> With 257 complex classes, ViT's self-attention mechanism excels at capturing fine-grained differences and global patterns that CNNs miss.</li>
+                            <li><strong>Why better accuracy?</strong> {"With 257 complex classes, ViT's self-attention mechanism excels at capturing fine-grained differences and global patterns that CNNs miss."}</li>
                             <li><strong>Why same training time?</strong> Both models trained for 10 epochs with similar batch processing, but ViT achieves much better results with fewer parameters due to its superior architecture for complex datasets.</li>
                           </>
                         )}
