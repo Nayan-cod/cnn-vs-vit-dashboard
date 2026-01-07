@@ -31,7 +31,7 @@ npm --version
 Open your terminal/command prompt and navigate to the dashboard folder:
 
 ```bash
-cd "c:\resnet18 vs deit-tinny\cnn-vs-vit-dashboard-main\cnn-vs-vit-dashboard-main"
+cd "c:cnn-vs-vit-dashboard-main"
 ```
 
 ### Step 2: Install Dependencies
