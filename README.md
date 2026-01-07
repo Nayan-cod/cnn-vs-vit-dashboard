@@ -1,7 +1,7 @@
 # CNN vs Vision Transformer - Multi-Dataset Dashboard
 
 A comprehensive Next.js dashboard for comparing ResNet-18 (CNN) and DeiT-tiny (Vision Transformer) performance across multiple datasets. Features dynamic dataset switching, validation metrics visualization, and detailed technical reporting.
-visit :https://cnn-vs-vit-dashboard-lemon.vercel.app/
+visit :https://cnn-vs-vit-dashboard-gu62.vercel.app/
 ## 🌟 Features
 
 - **Multi-Dataset Support**: Switch between CIFAR-10 and Caltech 256 datasets dynamically
