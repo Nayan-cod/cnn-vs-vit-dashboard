@@ -32,7 +32,7 @@ const Report = () => {
               <ul className="list-disc list-inside ml-2 space-y-1">
                 <li>Simple and computationally efficient</li>
                 <li>Induces sparsity (outputs exactly 0 for negative inputs)</li>
-                <li>Can suffer from "dying ReLU" problem</li>
+                <li>Can suffer from &quot;dying ReLU&quot; problem</li>
                 <li>Non-differentiable at x=0</li>
                 <li>Range: [0, ∞)</li>
               </ul>
@@ -142,7 +142,7 @@ const Report = () => {
           </p>
           <ul className="list-disc list-inside ml-4 text-sm text-slate-300 mt-2 space-y-1">
             <li><strong>Attention is parameter-efficient:</strong> Self-attention learns relationships dynamically rather than through fixed kernel weights</li>
-            <li><strong>Global context:</strong> Each patch attends to all other patches, unlike CNN's local receptive fields</li>
+            <li><strong>Global context:</strong> Each patch attends to all other patches, unlike CNN&apos;s local receptive fields</li>
             <li><strong>Fewer redundant computations:</strong> No need for multiple conv layers to build up receptive field size</li>
           </ul>
         </div>
@@ -161,8 +161,8 @@ const Report = () => {
               <h4 className="font-bold text-green-400 mb-2">Why Similar Accuracy? (~94-95%)</h4>
               <div className="space-y-2 text-sm text-slate-300">
                 <p><strong>Dataset Saturation:</strong> CIFAR-10 has only 10 classes with relatively simple patterns. Both architectures are powerful enough to learn these patterns fully.</p>
-                <p><strong>Model Capacity:</strong> Both 11.2M params (CNN) and 5.7M params (ViT) far exceed what's needed for 10 classes.</p>
-                <p><strong>Training Convergence:</strong> Both models converge to similar validation accuracy (~94.92%) indicating they've learned the optimal decision boundaries.</p>
+                <p><strong>Model Capacity:</strong> Both 11.2M params (CNN) and 5.7M params (ViT) far exceed what&apos;s needed for 10 classes.</p>
+                <p><strong>Training Convergence:</strong> Both models converge to similar validation accuracy (~94.92%) indicating they&apos;ve learned the optimal decision boundaries.</p>
                 <p className="mt-3"><strong>Key Insight:</strong> On simple datasets, architecture choice matters less than on complex ones. Both CNNs and ViTs can saturate performance.</p>
               </div>
             </div>
@@ -172,9 +172,9 @@ const Report = () => {
               <div className="space-y-2 text-sm text-slate-300">
                 <p><strong>Similar Duration (~23 minutes):</strong></p>
                 <ul className="list-disc list-inside ml-4 space-y-1">
-                  <li>CIFAR-10's small 32×32 images process quickly in both architectures</li>
-                  <li>ViT's patch size (16×16) creates only 4 patches, reducing attention complexity</li>
-                  <li>ResNet's convolutions are hardware-optimized but process more pixels</li>
+                  <li>CIFAR-10&apos;s small 32×32 images process quickly in both architectures</li>
+                  <li>ViT&apos;s patch size (16×16) creates only 4 patches, reducing attention complexity</li>
+                  <li>ResNet&apos;s convolutions are hardware-optimized but process more pixels</li>
                   <li>Modern GPUs parallelize both operations efficiently</li>
                 </ul>
               </div>
@@ -207,7 +207,7 @@ const Report = () => {
                   <li>Hierarchical features rely on many layers to see globally</li>
                   <li>Spatial bias can hurt when texture matters more than location</li>
                 </ul>
-                <p className="mt-3"><strong>Performance Gap (+9.11%):</strong> Shows ViT's superior representational power for complex, fine-grained classification.</p>
+                <p className="mt-3"><strong>Performance Gap (+9.11%):</strong> Shows ViT&apos;s superior representational power for complex, fine-grained classification.</p>
               </div>
             </div>
 
@@ -217,8 +217,8 @@ const Report = () => {
                 <p><strong>Both trained for 10 epochs with similar batch processing:</strong></p>
                 <ul className="list-disc list-inside ml-4 space-y-1">
                   <li>Caltech 256 has larger images but similar dataset size</li>
-                  <li>ViT's attention O(n²) complexity balanced by fewer parameters (5.7M vs 11.3M)</li>
-                  <li>ResNet's convolutions are O(n) but applied to more layers</li>
+                  <li>ViT&apos;s attention O(n²) complexity balanced by fewer parameters (5.7M vs 11.3M)</li>
+                  <li>ResNet&apos;s convolutions are O(n) but applied to more layers</li>
                   <li>Hardware optimizations (CUDA kernels) make both architectures comparable in wall-clock time</li>
                 </ul>
                 <p className="mt-2"><strong>Efficiency Insight:</strong> Despite same time, ViT achieves 9% better accuracy with half the parameters!</p>
@@ -229,7 +229,7 @@ const Report = () => {
               <h4 className="font-bold text-orange-400 mb-2">Validation Curve Analysis</h4>
               <div className="space-y-2 text-sm text-slate-300">
                 <p><strong>ResNet-18:</strong> Validation accuracy climbs from ~23% to ~76%, with loss decreasing from ~4.1 to ~1.15. Steady but limited by local feature extraction.</p>
-                <p><strong>DeiT-tiny:</strong> Validation accuracy surges from ~47% to ~85%, with loss dropping from ~2.6 to ~0.52. Steeper improvement shows attention's power on complex data.</p>
+                <p><strong>DeiT-tiny:</strong> Validation accuracy surges from ~47% to ~85%, with loss dropping from ~2.6 to ~0.52. Steeper improvement shows attention&apos;s power on complex data.</p>
                 <p className="mt-2 italic"><strong>Neither fully saturates at epoch 10</strong> – both could improve with more training, but ViT maintains consistent advantage.</p>
               </div>
             </div>
